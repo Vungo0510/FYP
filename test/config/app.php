@@ -172,11 +172,11 @@ return [
         /*
          * Application Service Providers...
          */
-        Epitrain\Providers\AppServiceProvider::class,
-        Epitrain\Providers\AuthServiceProvider::class,
-        // Epitrain\Providers\BroadcastServiceProvider::class,
-        Epitrain\Providers\EventServiceProvider::class,
-        Epitrain\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 
