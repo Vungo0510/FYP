@@ -43,6 +43,9 @@
 
             .content {
                 text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto
             }
 
             .title {
@@ -64,8 +67,11 @@
             }
 
             .picture{
-                height: 126px;
-                width: 156px;
+                height: 210px;
+                width: 260px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto
             }
         </style>
     </head>
@@ -78,16 +84,28 @@
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif
+        <table>
+            <tr>
 
-            <div>
-                <img src="http://static1.squarespace.com/static/5350fdbfe4b0ae193f88025d/t/5625ee2de4b0be0be0983ce8/1473397256723/?format=1000w" class="flex-center picture">
-            </div>
+                            <td>
+                                <div>
+                                    <img src="http://static1.squarespace.com/static/5350fdbfe4b0ae193f88025d/t/5625ee2de4b0be0be0983ce8/1473397256723/?format=1000w" class="flex-center picture">
+                                </div>
+                            </td>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Epitrain
-                </div>
-            </div>
+            </tr>
+
+            <!--<tr>
+
+                            <td>
+                                <div class="content">
+                                    <div class="title m-b-md">
+                                        Epitrain
+                                    </div>
+                                </div>
+                            </td>
+
+            </tr>-->
         </div>
     </body>
 </html>

@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Epitrain',
 
     /*
     |--------------------------------------------------------------------------
@@ -172,11 +172,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Epitrain\Providers\AppServiceProvider::class,
+        Epitrain\Providers\AuthServiceProvider::class,
+        // Epitrain\Providers\BroadcastServiceProvider::class,
+        Epitrain\Providers\EventServiceProvider::class,
+        Epitrain\Providers\RouteServiceProvider::class,
 
     ],
 
