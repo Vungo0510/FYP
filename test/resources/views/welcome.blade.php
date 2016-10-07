@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Epitrain</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -62,9 +62,15 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .picture{
+                height: 126px;
+                width: 156px;
+            }
         </style>
     </head>
     <body>
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -73,17 +79,13 @@
                 </div>
             @endif
 
+            <div>
+                <img src="http://static1.squarespace.com/static/5350fdbfe4b0ae193f88025d/t/5625ee2de4b0be0be0983ce8/1473397256723/?format=1000w" class="flex-center picture">
+            </div>
+
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    Epitrain
                 </div>
             </div>
         </div>
