@@ -6,28 +6,28 @@ use App\Http\Controllers\Controller;
 
 
 class LibraryController extends Controller{
+private var $library = new Library();
 
     #showing individual student's library
     public function $show_library($student){
 
         if ($student->email =="abc@gmail.com" && $student->deviceUID == "002724"){
-            $lib = new Library();
-            $books = $lib->$get_books();
+            $books = $library->$get_books();
 
-            return $books
+            return $books;
         }
-
         return null;
-
-
     }
 
-    #showing the entire library of epitrain
-    public function $show_library(){
-        $lib = new Library();
-        $books = $lib->$get_books();
+    #add books to library
+    public function $addBook($book){
+        $book= $library->$add_book($book);
+        return $book;
     }
-
+    #set books
+    function $setBooks($books){
+        $library->$set_books($books);
+    }
 
 
 ?>
