@@ -21,6 +21,15 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('user/activation/{token}', 'Auth\AuthController@activateUser')->name('user.activate');
 
-Route::get('/update', ['middleware' => 'auth', function() {
-	return view('usermanage.updateInfo');
-}]);
+//Route::get('/update', ['middleware' => 'auth', 'uses=>UserController@index', function() {
+	//return view('usermanage.updateInfo');
+//}]);
+
+//Route::resource('users', 'UserController');
+
+Route::group(['middleware' => ['auth','admin']], function() {
+	Route::get('/update', 'UserController@index');
+	Route::get('users/{id}', 'UserController@update');
+});
+
+Route::get('/library', 'LibraryController@show_library');

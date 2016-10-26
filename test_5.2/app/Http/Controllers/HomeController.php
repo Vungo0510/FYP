@@ -24,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = "many users";
+        //return view('home');
+        return \View::make('home', compact('users'));
     }
 }

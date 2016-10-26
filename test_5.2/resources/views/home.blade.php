@@ -8,8 +8,8 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in! <br/>
-                    <a href="{{ url('/update') }}">Update Information</a>
+                    <font color="black">You are logged in!{{$users}}</font> <br/>
+                    <a href="{{ url('/update') }}"><font color="black">Update Information</font></a>
                 </div>
             </div>
         </div>
