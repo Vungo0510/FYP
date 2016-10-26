@@ -29,6 +29,7 @@
                 }
             }
         }
+<<<<<<< HEAD
 				
 				/**delete a book from the user's collection
 						return true if the book is found and deleted
@@ -44,5 +45,7 @@
 						array_values($this->books);
 						return true;
 				)
+=======
+>>>>>>> origin/master
     }
 ?>
