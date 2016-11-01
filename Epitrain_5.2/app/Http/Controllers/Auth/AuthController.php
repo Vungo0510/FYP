@@ -61,6 +61,16 @@ class AuthController extends Controller
 
         return redirect('/login')->with('status', 'We sent you an activation code. Check your email.');
     }
+    
+    public function authenticated(Request $request, $user)
+{
+    if (!$user->activated) {
+        $this->activationService->sendActivationMail($user);
+        auth()->logout();
+        return back()->with('warning', 'You need to confirm your account. We have sent you an activation code, please check your email.');
+    }
+    return redirect()->intended($this->redirectPath());
+}
 
     /**
      * Get a validator for an incoming registration request.
@@ -90,6 +100,15 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+    
+    public function activateUser($token)
+    {
+        if ($user = $this->activationService->activateUser($token)) {
+            auth()->login($user);
+            return redirect($this->redirectPath());
+        }
+        abort(404);
     }
 
 }

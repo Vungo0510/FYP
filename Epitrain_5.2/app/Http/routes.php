@@ -27,6 +27,10 @@ Route::get('user/activation/{token}', 'Auth\AuthController@activateUser')->name(
 
 //Route::resource('users', 'UserController');
 
+Route::post('/laravel/public/signup', 'SignUpController@store');
+
+Route::get('user/activation/{token}', 'Auth\AuthController@activateUser')->name('user.activate');
+
 Route::group(['middleware' => ['auth','admin']], function() {
 	Route::get('/update', 'UserController@index');
 	Route::get('users/{id}', 'UserController@update');

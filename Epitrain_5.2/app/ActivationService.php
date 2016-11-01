@@ -60,6 +60,23 @@ class ActivationService
 
     }
 
+    public function register(Request $request)
+{
+    $validator = $this->validator($request->all());
+
+    if ($validator->fails()) {
+        $this->throwValidationException(
+            $request, $validator
+        );
+    }
+
+    $user = $this->create($request->all());
+
+    $this->activationService->sendActivationMail($user);
+
+    return redirect('/login')->with('status', 'We sent you an activation code. Check your email.');
+}
+    
     private function shouldSend($user)
     {
         $activation = $this->activationRepo->getActivation($user);
