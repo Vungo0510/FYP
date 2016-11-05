@@ -46,4 +46,22 @@ class FileEntryController extends Controller
 		return (new Response($file, 200))
               ->header('Content-Type', $entry->mime);
 	}
+
+	public function delete($filename){
+		//$im = new \Imagick( "" );
+		$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
+
+		if($entry) {
+			$file = Storage::disk('local')->delete($entry->filename);
+			$entry->delete();
+	 		return redirect('fileentry');
+			// return (new Response("Delete Successfully", 200))
+	  //             ->header('Content-Type', "text/html");
+	          }else {
+	          	return redirect('fileentry');
+	          	// return (new Response("No such file", 200))
+	           //    ->header('Content-Type', "text/html");
+	          }
+		
+	}
 }
