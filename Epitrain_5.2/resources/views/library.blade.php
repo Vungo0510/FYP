@@ -9,6 +9,7 @@
 
                 <div class="panel-body">
                     this is your library
+                    @yield('main')
                 </div>
             </div>
         </div>

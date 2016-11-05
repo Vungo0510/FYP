@@ -42,6 +42,7 @@ class ActivationService
 
     public function activateUser($token)
     {
+        //echo 'jlkdjfldkjgldfkgjdfkl';
         $activation = $this->activationRepo->getActivationByToken($token);
 
         if ($activation === null) {
@@ -81,6 +82,10 @@ class ActivationService
     {
         $activation = $this->activationRepo->getActivation($user);
         return $activation === null || strtotime($activation->created_at) + 60 * 60 * $this->resendAfter < time();
+    }
+
+    public function get() {
+        return ['dsf','sdfsd'];
     }
 
 }

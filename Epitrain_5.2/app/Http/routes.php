@@ -39,3 +39,36 @@ Route::group(['middleware' => ['auth','admin']], function() {
 Route::get('/library', 'LibraryController@index');
 
 Route::resource('books', 'LibraryController');
+
+
+Route::group(['middleware' => 'auth'], function() {
+	//For file upload and download
+Route::get('fileentry', 'FileEntryController@index');
+Route::get('fileentry/get/{filename}', [
+	'as'=>'getentry', 'uses'=>'FileEntryController@get']);
+Route::post('fileentry/add', [
+	'as'=>'addentry', 'uses'=>'FileEntryController@add']);
+
+});
+
+// // Download Route
+// Route::get('download/{filename}', function($filename)
+// {
+//     // Check if file exists in app/storage/file folder
+//     $file_path = storage_path() .'/file/'. $filename;
+//     if (file_exists($file_path))
+//     {
+//         // Send Download
+//         return Response::download($file_path, $filename, [
+//             'Content-Length: '. filesize($file_path)
+//         ]);
+//     }
+//     else
+//     {
+//         // Error
+//         exit('Requested file does not exist on our server!');
+//     }
+// })
+// ->where('filename', '[A-Za-z0-9\-\_\.]+');
+
+

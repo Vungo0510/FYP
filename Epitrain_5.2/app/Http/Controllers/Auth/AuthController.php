@@ -111,4 +111,9 @@ class AuthController extends Controller
         abort(404);
     }
 
+    protected function activateUser($token) {
+        $this->activationService->activateUser($token);
+        return redirect('home');
+    }
+
 }
