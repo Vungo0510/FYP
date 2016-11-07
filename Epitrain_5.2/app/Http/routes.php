@@ -28,7 +28,7 @@ Route::get('user/activation/{token}', 'Auth\AuthController@activateUser')->name(
 //Route::resource('users', 'UserController');
 
 Route::group(['middleware' => ['auth','admin']], function() {
-	Route::get('/update', 'UserController@index');
+	
 	Route::get('users/{id}', 'UserController@update');
 	Route::delete('fileentry/delete/{filename}', [
 	'as'=>'deleteentry', 'uses'=>'FileEntryController@delete']);
@@ -36,12 +36,15 @@ Route::group(['middleware' => ['auth','admin']], function() {
 
 
 Route::group(['middleware' => 'auth'], function() {
+	Route::get('/update', 'UserController@index');
 	//For file upload and download
-Route::get('fileentry', 'FileEntryController@index');
-Route::get('fileentry/get/{filename}', [
-	'as'=>'getentry', 'uses'=>'FileEntryController@get']);
-Route::post('fileentry/add', [
-	'as'=>'addentry', 'uses'=>'FileEntryController@add']);
+	Route::get('fileentry', 'FileEntryController@index');
+	Route::get('fileentry/get/{filename}', [
+		'as'=>'getentry', 'uses'=>'FileEntryController@get']);
+	Route::post('fileentry/add', [
+		'as'=>'addentry', 'uses'=>'FileEntryController@add']);
+
+	Route::get('mylibrary', 'MyLibraryController@index');
 
 });
 
