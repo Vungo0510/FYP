@@ -34,10 +34,6 @@ Route::group(['middleware' => ['auth','admin']], function() {
 	'as'=>'deleteentry', 'uses'=>'FileEntryController@delete']);
 });
 
-Route::get('/library', 'LibraryController@index');
-
-Route::resource('books', 'LibraryController');
-
 
 Route::group(['middleware' => 'auth'], function() {
 	//For file upload and download

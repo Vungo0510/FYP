@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Fileentry;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
@@ -25,7 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         $users = "many users";
-        //return view('home');
-        return \View::make('home', compact('users'));
+        $entries = Fileentry::all();
+ 
+        return view('home', compact('entries'));
+       
     }
 }

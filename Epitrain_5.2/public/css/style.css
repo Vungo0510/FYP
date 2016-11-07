@@ -1,6 +1,6 @@
 /* HEADER / FOOTER */
 header{background: url('../img/header_bg.png') no-repeat center / cover; color: #fff; text-align: center; position: relative; max-height: auto; min-height: 700px; transition: all 1s; -moz-transition: all 1s; -webkit-transition: all 1s;}
-header .wrap{width: 85%; max-width: 980px; padding-bottom: 50px;}
+/*header .wrap{width: 85%; max-width: 980px; padding-bottom: 50px;}
 header .wrap .animated{position: relative; z-index: 999;}
 header .top-row{position: relative; overflow: hidden;}
 header .top-row .logo{margin: 40px 30px; float: left;}
@@ -65,20 +65,20 @@ footer .bottom input::-moz-placeholder{color: #874b9c; opacity: 1;}
 footer .bottom input:-ms-input-placeholder{color: #874b9c;}
 footer .bottom input:placeholder-shown {color: #874b9c;}
 
-/* MAIN PAGE */
+/* MAIN PAGE 
 .main header{min-height: 100vh; max-height: 100vh;}
 .main header .subtitle.submain{visibility: visible; opacity: 1; max-height: 100px; transition: all 0.5s linear; margin: 0 0 30px 0;}
 .main header .title{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -ms-transform: scale(1.2); text-transform: uppercase;}
 .main section, .main footer{display: none;}
 
-/* LOGIN / REGISTER */
+/* LOGIN / REGISTER 
 .remodal.login .social-login .btn{font-size: 16px; line-height: 18px; text-align: center; font-weight: 300;}
 .remodal.login .social-login .btn-facebook{color: #425f9c; border: 2px solid #e6e8ed;}
 .remodal.login .social-login .btn-facebook:hover{background: #425f9c; color: #fff; border-color: #425f9c;}
 .remodal.login .social-login .btn-google{color: #dd4e3f; border: 2px solid #eedfdd;}
 .remodal.login .social-login .btn-google:hover{background: #dd4e3f; color: #fff; border-color: #dd4e3f;}
 
-/* SHOPPING CART */
+/* SHOPPING CART 
 .shopping-cart .btn{padding: 15px 20px;}
 .shopping-cart .cart{margin-top: 20px;}
 .shopping-cart .cart .fleft{width: 75%; padding-right: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
@@ -90,7 +90,7 @@ footer .bottom input:placeholder-shown {color: #874b9c;}
 .shopping-cart .cart .total-box .btn{width: 100%; padding: 15px; font-size: 15px;}
 .shopping-cart .cart .total-box .info-text{text-align: left; margin-top: 10px;}
 
-/* ADMIN REQUESTS */
+/* ADMIN REQUESTS 
 .requests-list .request{position: relative; width: 100%; margin-top: 10px; background: #fff; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 .requests-list .request:first-of-type{margin-top: 0;}
 .admin-requests .requests-list .request{padding: 20px 141px 20px 20px;}
@@ -107,4 +107,4 @@ footer .bottom input:placeholder-shown {color: #874b9c;}
 .user-requests .requests-list .request .min img{width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); border-top-left-radius: 6px; -moz-border-radius-topleft: 6px; -webkit-border-top-left-radius: 6px; border-bottom-left-radius: 6px; -moz-border-radius-bottomleft: 6px; -webkit-border-bottom-left-radius: 6px;}
 .user-requests .requests-list .request .download, .user-requests .requests-list .request .description{position: absolute; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%);}
 .user-requests .requests-list .request .download{right: 15px;}
-.user-requests .requests-list .request .description{font-weight: 700; font-size: 18px;}
+.user-requests .requests-list .request .description{font-weight: 700; font-size: 18px;}*/

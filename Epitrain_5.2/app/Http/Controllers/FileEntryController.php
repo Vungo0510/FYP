@@ -39,12 +39,21 @@ class FileEntryController extends Controller
 	}
 
 	public function get($filename){
-		//$im = new \Imagick( "" );
+		//$im = new imagick('');
 		$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
 		$file = Storage::disk('local')->get($entry->filename);
  
 		return (new Response($file, 200))
               ->header('Content-Type', $entry->mime);
+	}
+
+	public function getPreview($filename){
+		// $im = new \Imagick( "" );
+		// $entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
+		// $file = Storage::disk('local')->get($entry->filename);
+ 
+		// return (new Response($file, 200))
+  //             ->header('Content-Type', $entry->mime);
 	}
 
 	public function delete($filename){
